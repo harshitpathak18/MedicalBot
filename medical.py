@@ -16,7 +16,7 @@ from concurrent.futures import ThreadPoolExecutor
 # -----------------------------------------------------------------------------------------
 
 # Set API key for Google Gemini model
-os.environ["GOOGLE_API_KEY"] = "AIzaSyBgXK36EMVy1m8mQAEDpo4feTdjUD2hZi0"
+os.environ["GOOGLE_API_KEY"] = ""
 
 # Initialize Gemini language model
 llm_gemini = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.4)
