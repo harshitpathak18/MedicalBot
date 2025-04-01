@@ -21,6 +21,48 @@ def chatbot_page(page: ft.Page):
     
     chat_column = ft.Column(expand=True, spacing=10, scroll=ft.ScrollMode.AUTO)
 
+    # Default bot message
+    default_bot_message = (
+        "**Hello!** 👋 I am **MedicalBot**, your AI-powered health assistant.\n\n"
+        "🔍 I can help you with:\n"
+        "- Identifying symptoms 🤒\n"
+        "- Providing health tips 🏥\n"
+        "- Explaining medical conditions 🧬\n"
+        "- Suggesting general treatments 💊\n\n"
+        "⚠️ **Disclaimer:** I am not a substitute for professional medical advice. Always consult a doctor for serious concerns."
+    )
+
+    chat_column.controls.append(
+        ft.Row([
+            ft.Icon(name=ft.Icons.MEDICAL_SERVICES, color="#FADDBB", size=35),
+            ft.Container(
+                content=ft.Markdown(
+                    default_bot_message,
+                    extension_set=ft.MarkdownExtensionSet.GITHUB_WEB,
+                    selectable=True,
+                    width=page.width * 0.55,
+                    md_style_sheet=ft.MarkdownStyleSheet(
+                        a_text_style=ft.TextStyle(color="#9146FF", decoration="underline"),
+                        p_text_style=ft.TextStyle(size=14, color="black"),
+                        h1_text_style=ft.TextStyle(size=18, weight=ft.FontWeight.BOLD, color="#9146FF"),
+                        h2_text_style=ft.TextStyle(size=16, weight=ft.FontWeight.BOLD, color="#9146FF"),
+                        h3_text_style=ft.TextStyle(size=14, weight=ft.FontWeight.BOLD, color="black"),
+                        list_bullet_text_style=ft.TextStyle(color="black"),
+                        list_indent=20,
+                        block_spacing=10,
+                        h1_padding=ft.padding.only(bottom=5),
+                        h2_padding=ft.padding.only(bottom=5),
+                        p_padding=ft.padding.only(bottom=8),
+                    )      
+                ),
+                padding=ft.padding.all(10),
+                bgcolor="#FADDBB",
+                border_radius=20,
+                width=page.width * 0.4,
+            )
+        ], alignment=ft.MainAxisAlignment.START)
+    )
+
     def send_message(e):
         user_text = chat_input.value.strip()
         if user_text:
