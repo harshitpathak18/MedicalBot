@@ -19,10 +19,12 @@ MedicalBot is an **AI-powered medical chatbot** designed to provide **accurate, 
 
 --- 📷 Screenshots
 
-<img src="screenshots/1.png" width="300" height="300" />
-<img src="screenshots/2.png" width="300" height="300" />
-<img src="screenshots/3.png" width="300" height="300" />
-<img src="screenshots/4.png" width="300" height="300" />
+<div style="display: flex; flex-wrap: wrap;">
+  <img src="screenshots/1.png" width="300" height="300" style="margin-right: 10px; margin-bottom: 10px;" />
+  <img src="screenshots/2.png" width="300" height="300" style="margin-right: 10px; margin-bottom: 10px;" />
+  <img src="screenshots/3.png" width="300" height="300" style="margin-right: 10px; margin-bottom: 10px;" />
+  <img src="screenshots/4.png" width="300" height="300" style="margin-bottom: 10px;" />
+</div>
 
 
 
