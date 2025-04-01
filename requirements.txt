@@ -4,4 +4,3 @@ langchain-google-genai
 langchain
 sentence-transformers
 huggingface-hub
-faiss-cpu
