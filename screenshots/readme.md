@@ -1,1 +1,1 @@
-Contains some working screenshot of the file
+Contains some working screenshots of the file
